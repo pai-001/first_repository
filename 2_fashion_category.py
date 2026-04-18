@@ -7,8 +7,8 @@ from torch.utils.data import Dataset, DataLoader, TensorDataset
 
 # 1. 准备数据
 # 1.1 加载数据
-data_train = pd.read_csv('D:\\BaiduNetdiskDownload\\data\\fashion-mnist_test.csv')
-data_test = pd.read_csv('D:\\BaiduNetdiskDownload\\data\\fashion-mnist_train.csv')
+data_train = pd.read_csv('data\\fashion-mnist_test.csv')
+data_test = pd.read_csv('data\\fashion-mnist_train.csv')
 
 # 1.2 划分数据特征和目标，并转换成张量
 X_train = torch.tensor(data_train.iloc[:,1:].values,dtype=torch.float).reshape(-1,1,28,28)
